@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "cvastooltip",
+  "version": "${version}",
+  "name": "cvastooltip",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/cvastooltip/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "org.example.CVAS.cvastooltip.client.CvastooltipDataGenerator"
+    ],
+    "client": [
+      "org.example.CVAS.cvastooltip.client.CvastooltipClient"
+    ],
+    "main": [
+      "org.example.CVAS.cvastooltip.Cvastooltip"
+    ]
+  },
+  "mixins": [
+    "cvastooltip.mixins.json",
+    {
+      "config": "cvastooltip.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
